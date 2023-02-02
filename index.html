@@ -5,7 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="temp1.css">
+    <style type="text/css">
+        body{
+    /* background: rgb(0,7,36);
+    background: linear-gradient(to right, rgba(0, 7, 36, 0.977),rgb(58, 9, 90) ); */
+    background: rgb(63,94,251);
+background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* background: rgb(191,195,34);
+background: radial-gradient(circle, rgba(191,195,34,1) 0%, rgba(253,45,119,1) 100%); */
+#main{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    /* background-color: rgba(168, 82, 248, 0.436); */
+    /* background-color: rgba(0, 0, 0, 0.342); */
+    background-color: rgba(216, 39, 39, 0.623);
+    margin-top: 9%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+    padding-top: 20px;
+    text-align: left;
+    border-radius: 8px;
+    border: 3px;
+    border-color: #fff;
+    box-shadow: 5px 5px black;
+}
+input,#type {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.607);
+
+}
+label{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    /* color: white; */
+    color: black;
+}
+h1{
+    /* color: rgba(255, 255, 255, 0.909); */
+    color: black;
+
+}
+#result{
+    color: #03001C;
+    font-size: 20px;
+
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    background-color: rgb(0,7,36);
+    color: #fff;
+    transition: 0.5s;
+
+}
+input:hover,#type:hover{
+    outline-color: violet;
+    outline-width: 2px solid;
+}
+button:hover{
+    background-color: #fff;
+    color: blueviolet;
+}
+    </style>
 </head>
 <body>
     <center><div id="main">
@@ -23,6 +98,33 @@
     <span id="result2"></span>
     <button type="button" onClick="tempCon()">Convert</button>
     </div></center>
-    <script  src="temp1.js"></script>
+    <script type="text/js">
+    function tempCon(){
+    let inbox=document.querySelector(".inputbox").value;
+    let typecon=document.getElementById("type");
+    let res1=document.getElementById("result1");
+    let res2=document.getElementById("result2");
+    let valNum = parseInt(inbox);
+    if('f'===typecon.value){
+        res1.innerHTML="Celsius : "+((valNum-32)/1.8).toFixed(2)+"&#8451";
+        res1.style="color: #fff;font-size: 22px; font-weight: bolder"
+        res2.innerHTML="Kelvin : "+(((valNum-32)/1.8)+273.15).toFixed(2)+"&#8490;";
+        res2.style="color: #fff;font-size: 22px;font-weight: bolder"
+    }
+    else if('c'===typecon.value)
+    {
+        res1.innerHTML="Fahrenheit : "+((valNum*1.8)+32).toFixed(2)+"&#8457;";
+        res1.style="color: #fff;font-size: 22px;font-weight: bolder"
+        res2.innerHTML="Kelvin : "+(valNum+273.15).toFixed(2)+"&#8490;";
+        res2.style="color: #fff;font-size: 22px;font-weight: bolder"
+    }
+    else{
+        res1.innerHTML="Fahrenheit : "+(((valNum-273.15)*1.8)+32).toFixed(2)+"&#8457;";
+        res1.style="color: #fff;font-size: 22px;font-weight: bolder"
+        res2.innerHTML="Celsius : "+(valNum-273.15).toFixed(2)+"&#8451";
+        res2.style="color: #fff;font-size: 22px;font-weight: bolder"
+
+    }
+}</script>
 </body>
 </html>
