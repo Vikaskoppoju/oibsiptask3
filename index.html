@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style type="text/css">
-        body{
+    
+</head>
+<style type="text/css">
+    body{
     /* background: rgb(0,7,36);
     background: linear-gradient(to right, rgba(0, 7, 36, 0.977),rgb(58, 9, 90) ); */
     background: rgb(63,94,251);
@@ -80,8 +82,7 @@ button:hover{
     background-color: #fff;
     color: blueviolet;
 }
-    </style>
-</head>
+</style>
 <body>
     <center><div id="main">
     <h1>Temperature Converter</h1>
@@ -98,7 +99,9 @@ button:hover{
     <span id="result2"></span>
     <button type="button" onClick="tempCon()">Convert</button>
     </div></center>
-    <script>
+  
+</body>
+<script>
     function tempCon(){
     let inbox=document.querySelector(".inputbox").value;
     let typecon=document.getElementById("type");
@@ -125,6 +128,9 @@ button:hover{
         res2.style="color: #fff;font-size: 22px;font-weight: bolder"
 
     }
-}</script>
-</body>
+}
+
+
+
+</script>
 </html>
